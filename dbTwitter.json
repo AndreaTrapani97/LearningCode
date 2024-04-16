@@ -1,0 +1,43 @@
+{
+  "datiUtente": [
+    {
+      "id": "9e4d",
+      "username": "Hakuuuuuu",
+      "password": "Ciaaaaaaaaaaa33@@",
+      "tweets": [
+        {
+          "username": "Hakuuuuuu",
+          "dataInvio": "14/4/2024, 21:25:44",
+          "tweetTesto": "sedqweweqwewq"
+        },
+        {
+          "username": "Hakuuuuuu",
+          "dataInvio": "14/4/2024, 21:25:46",
+          "tweetTesto": "dasdasdasd"
+        },
+        {
+          "username": "Hakuuuuuu",
+          "dataInvio": "14/4/2024, 21:25:57",
+          "tweetTesto": "dasdasdasdasd"
+        },
+        {
+          "username": "Hakuuuuuu",
+          "dataInvio": "14/4/2024, 21:27:41",
+          "tweetTesto": "asdasdsadsadsa"
+        }
+      ]
+    },
+    {
+      "id": "f4df",
+      "username": "_favilla",
+      "password": "Coso222@",
+      "tweets": [
+        {
+          "username": "_favilla",
+          "dataInvio": "14/4/2024, 21:28:18",
+          "tweetTesto": "Eiiiiiiiiiiiiiii"
+        }
+      ]
+    }
+  ]
+}
