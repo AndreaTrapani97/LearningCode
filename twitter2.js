@@ -15,7 +15,7 @@ let username = localStorage.getItem("Nome Utente");
 let password = localStorage.getItem("Password");
 
 // logo username
-utenteOk.innerHTML = `<i class="fa-solid fa-user me-2"></i> ${username}`;
+utenteOk.innerHTML = `<i class="fa-solid fa-user me-2"></i> @${username}`;
 
 function inserisciTweet() {
     // oggetto tweet
@@ -35,21 +35,31 @@ function inserisciTweet() {
     let tweetSingoloContainer = document.createElement("div");
     tweetSingoloContainer.setAttribute("class", "container bg-light rounded-2 border border-3 mb-3");
     tweetContainer.appendChild(tweetSingoloContainer);
-
-    tweetSingoloContainer.innerHTML = `
-    <p><i class="fa-solid fa-user me-2"></i> ${tweet.username}</p>
-    <p><strong>Data Invio:</strong> ${tweet.dataInvio}</p>
-    <p><strong>Tweet:</strong> ${tweet.tweetTesto}</p>
+    if(textArea.value==0){
+        tweetSingoloContainer.textContent="errore"
+    }else{
+        tweetSingoloContainer.innerHTML = `
+    <p><i class="fa-solid fa-user me-2"></i> ${tweet.username} ${tweet.dataInvio}</p>
+    <p>${tweet.tweetTesto}</p>
     `;
+    }
+    
 
     textArea.value = "";
+    contatore.textContent="Caratteri rimanenti 50/50"
 }
 
+
+
 function contaCaratteri() {
-    contatore.textContent = `${textArea.value.length}/50`;
-    if (textArea.value.length >= 50) {
-        contatore.textContent = "limite caratteri";
+    let testo=textArea.value;
+    let conteggio=(50 - testo.length);
+    contatore.textContent ="Caratteri rimanenti "+conteggio+"/50";
+
+    if (conteggio==0) {
+        contatore.textContent="Caratteri finiti"  
     }
+    
 }
 
 function logout() {
